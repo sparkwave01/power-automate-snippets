@@ -8,6 +8,6 @@ screenshots you need to rebuild the example in your own flow.
 
 | # | Topic | Post |
 |---|-------|------|
-| _coming soon_ | | |
+| 001 | [Compose: debugging + waiting for parallel branches](001-compose/) | _link coming soon_ |
 
 Follow along on LinkedIn for new tips.
