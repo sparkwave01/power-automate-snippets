@@ -39,4 +39,4 @@ To continue anyway: Compose → **Settings → Run after** → expand each branc
 branch's connector as a dashed line. Add your own error handling after it, so failures are
 still noticed.
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7510433901228617728/
