@@ -67,4 +67,4 @@ A third Scope `Finally` after Catch, with Run after on Catch set to **all four**
 Note: if Catch ends with Terminate, Finally won't run after a failure — place Terminate at the end of
 Finally instead (with a Condition), or skip Finally.
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7513695295197696001/
