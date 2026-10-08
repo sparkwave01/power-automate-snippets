@@ -27,9 +27,8 @@ to a separate partner site; when the original is **archived or deleted**, the co
    so the partner site always matches the team site
 
 ## Why the scheduled check
-Flows 1–3 run on file changes. Deleting a whole folder fires the delete trigger **once for the folder**, not once
-per file ([Microsoft docs](https://learn.microsoft.com/en-us/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers)),
-so those files are never seen by the file-level flows.
+Flows 1–3 run on file changes. When someone works at folder level, for example deletes a whole folder, the file
+flows never see those files and never fire for them. The scheduled check catches what they miss.
 
 ## Comparing the two sides by GUID (no nested loops)
 
