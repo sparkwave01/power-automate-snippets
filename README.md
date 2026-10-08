@@ -10,5 +10,6 @@ screenshots you need to rebuild the example in your own flow.
 |---|-------|------|
 | 001 | [Compose: debugging + waiting for parallel branches](001-compose/) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7510433901228617728/) |
 | 002 | [Try / Catch with Scope, Run after and Terminate](002-try-catch-scope/) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7513695295197696001/) |
+| 003 | [Filter array, and item() vs items()](003-filter-array-item-items/) | _link coming soon_ |
 
 Follow along on LinkedIn for new tips.
