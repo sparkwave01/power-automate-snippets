@@ -33,3 +33,31 @@ Notes:
   `convertTimeZone('2026-10-14T01:30:00Z', 'UTC', 'Eastern Standard Time', 'MM-dd-yyyy')` → `10-13-2026`
 
 📎 LinkedIn post: _link coming soon_
+
+## 005: Remove duplicates with union()
+
+There's no `distinct()` function. `union()` returns each value once, so pass the same array twice:
+```
+union(variables('Locations'), variables('Locations'))
+```
+`["Boston", "Austin", "Boston", "Denver"]` → `["Boston", "Austin", "Denver"]`
+
+Per row inside a **Select**, e.g. a multi-select column with repeated values:
+```
+union(item()?['Location'], item()?['Location'])
+```
+
+Case-insensitive version (lower-case everything first, using a Select in text mode over the array):
+```
+Select   From: variables('Locations')   Map (text mode): toLower(item())
+union(body('Select'), body('Select'))
+```
+
+Notes:
+- Case-sensitive: `"Boston"` and `"boston"` are different values.
+- Objects only count as duplicates when **every** property matches. To dedupe by one field, Select that field first.
+- Quick test in a Compose:
+  `union(createArray('Boston','Austin','Boston','Denver','boston'), createArray('Boston','Austin','Boston','Denver','boston'))`
+
+📎 LinkedIn post: _link coming soon_
+

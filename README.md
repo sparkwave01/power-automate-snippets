@@ -13,5 +13,6 @@ screenshots you need to rebuild the example in your own flow. Shorter one-expres
 | 002 | [Try / Catch with Scope, Run after and Terminate](002-try-catch-scope/) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7513695295197696001/) |
 | 003 | [Filter array, and item() vs items()](003-filter-array-item-items/) | _link coming soon_ |
 | 004 | [Today's date in a file name (convertTimeZone)](expressions.md#004-todays-date-in-a-file-name) | _link coming soon_ |
+| 005 | [Remove duplicates with union()](expressions.md#005-remove-duplicates-with-union) | _link coming soon_ |
 
 Follow along on LinkedIn for new tips.
