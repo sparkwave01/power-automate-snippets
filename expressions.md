@@ -32,7 +32,7 @@ Notes:
 - Test any time of day with a fixed UTC timestamp:
   `convertTimeZone('2026-10-14T01:30:00Z', 'UTC', 'Eastern Standard Time', 'MM-dd-yyyy')` → `10-13-2026`
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7518112317729955840/
 
 ## 005: Remove duplicates with union()
 
