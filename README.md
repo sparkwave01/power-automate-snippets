@@ -15,5 +15,6 @@ screenshots you need to rebuild the example in your own flow. Shorter one-expres
 | 004 | [Today's date in a file name (convertTimeZone)](expressions.md#004-todays-date-in-a-file-name) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7518112317729955840/) |
 | 005 | [Remove duplicates with union()](expressions.md#005-remove-duplicates-with-union) | _link coming soon_ |
 | 006 | [Approved files to another site: GUID link + scheduled check](006-guid-sync-architecture/) | _link coming soon_ |
+| 007 | [A short ID in a file name](expressions.md#007-a-short-id-in-a-file-name) | _link coming soon_ |
 
 Follow along on LinkedIn for new tips.

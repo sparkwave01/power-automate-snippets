@@ -61,3 +61,47 @@ Notes:
 
 📎 LinkedIn post: _link coming soon_
 
+## 007: A short ID in a file name
+
+`Report.docx` → `Report-a1b2c3.docx`, keeping every dot in the name and the extension.
+
+Two Compose actions first:
+- `FileName` — the original name, e.g. `triggerOutputs()?['body/{FilenameWithExtension}']`
+- `ShortID` — `toLower(substring(guid(), 0, 6))`
+
+Then:
+```
+concat(
+  join(take(split(outputs('FileName'), '.'), sub(length(split(outputs('FileName'), '.')), 1)), '.'),
+  '-',
+  outputs('ShortID'),
+  '.',
+  last(split(outputs('FileName'), '.'))
+)
+```
+
+| Original | Result |
+|---|---|
+| `Report.docx` | `Report-a1b2c3.docx` |
+| `Budget.xlsx` | `Budget-a1b2c3.xlsx` |
+| `Report.v2.final.docx` | `Report.v2.final-a1b2c3.docx` |
+| `archive.tar.gz` | `archive.tar-a1b2c3.gz` |
+
+Names without an extension (e.g. `README`), as a precaution (the basic version would give `-a1b2c3.README`):
+```
+if(
+  contains(outputs('FileName'), '.'),
+  concat(
+    join(take(split(outputs('FileName'), '.'), sub(length(split(outputs('FileName'), '.')), 1)), '.'),
+    '-', outputs('ShortID'), '.', last(split(outputs('FileName'), '.'))
+  ),
+  concat(outputs('FileName'), '-', outputs('ShortID'))
+)
+```
+
+Notes:
+- 6 hex characters ≈ 16.7 million combinations: fine for people to tell files apart. For a link between files that
+  must never break, store the full `guid()` in a (hidden) column instead.
+
+📎 LinkedIn post: _link coming soon_
+
