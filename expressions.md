@@ -102,8 +102,7 @@ if(
 Notes:
 - Meant for everyday file names like `Report.docx` or `Budget.xlsx`. Unusual names (e.g. starting with a dot)
   may need extra handling.
-- 6 hex characters ≈ 16.7 million combinations: fine for people to tell files apart. For a link between files that
-  must never break, store the full `guid()` in a (hidden) column instead.
+- 6 hex characters ≈ 16.7 million combinations: plenty to keep file names apart in one library.
 
 📎 LinkedIn post: _link coming soon_
 
