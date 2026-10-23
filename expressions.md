@@ -87,7 +87,7 @@ concat(
 | `Report.v2.final.docx` | `Report.v2.final-a1b2c3.docx` |
 | `archive.tar.gz` | `archive.tar-a1b2c3.gz` |
 
-Names without an extension (e.g. `README`), as a precaution (the basic version would give `-a1b2c3.README`):
+Names without an extension (e.g. `README`), as a precaution (the basic version expects a dot in the name):
 ```
 if(
   contains(outputs('FileName'), '.'),
