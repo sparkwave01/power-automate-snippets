@@ -87,7 +87,7 @@ concat(
 | `Report.v2.final.docx` | `Report.v2.final-a1b2c3.docx` |
 | `archive.tar.gz` | `archive.tar-a1b2c3.gz` |
 
-Names without an extension (e.g. `README`), as a precaution (the basic version expects a dot in the name):
+Names without an extension (e.g. `README`). The basic version gives `-a1b2c3.README` (tested); this one gives `README-a1b2c3`:
 ```
 if(
   contains(outputs('FileName'), '.'),
@@ -100,6 +100,8 @@ if(
 ```
 
 Notes:
+- Meant for everyday file names like `Report.docx` or `Budget.xlsx`. Unusual names (e.g. starting with a dot)
+  may need extra handling.
 - 6 hex characters ≈ 16.7 million combinations: fine for people to tell files apart. For a link between files that
   must never break, store the full `guid()` in a (hidden) column instead.
 
