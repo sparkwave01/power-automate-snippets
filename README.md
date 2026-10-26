@@ -16,5 +16,6 @@ screenshots you need to rebuild the example in your own flow. Shorter one-expres
 | 005 | [Remove duplicates with union()](expressions.md#005-remove-duplicates-with-union) | _link coming soon_ |
 | 006 | [Approved files to another site: GUID link + scheduled check](006-guid-sync-architecture/) | _link coming soon_ |
 | 007 | [A short ID in a file name](expressions.md#007-a-short-id-in-a-file-name) | _link coming soon_ |
+| 008 | [Tag a folder once: folder tags synced to files](008-folder-auto-tagging/) | _link coming soon_ |
 
 Follow along on LinkedIn for new tips.
