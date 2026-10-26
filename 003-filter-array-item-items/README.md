@@ -55,4 +55,4 @@ returned 0, and every step was green.
 > SharePoint **lookup** columns come back as objects. For a lookup column named `Customer`, use
 > `item()?['Customer']?['Id']` instead of `item()?['CustomerID']`.
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7520279280761610240/
