@@ -106,3 +106,33 @@ Notes:
 
 📎 LinkedIn post: _link coming soon_
 
+## 009: Excel column names and _x0023_
+
+The Excel connector encodes four characters in column names (from Microsoft's
+[Excel Online (Business) connector docs](https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/)):
+
+| Character | Encoded |
+|---|---|
+| `#` | `_x0023_` |
+| `.` | `_x002e_` |
+| `@` | `_x0040_` |
+| `:` | `_x003a_` |
+
+`Order #` → `Order _x0023_`, `No.` → `No_x002e_`. Spaces stay as they are.
+
+JSON row for **Add a row into a table** (e.g. with a table chosen at run time) — use the encoded names as keys:
+```json
+{
+  "Order Date": "@{formatDateTime(utcNow(), 'yyyy-MM-dd')}",
+  "Order _x0023_": "@{outputs('OrderNumber')}",
+  "Amount": "@{outputs('Amount')}"
+}
+```
+
+The pattern is `_x` + the character's hex code (4 digits) + `_`. SharePoint uses the same pattern for internal
+column names, e.g. a column created as `Unit Price` has the internal name `Unit_x0020_Price`.
+
+To see the real names, run **List rows present in a table** and look at the keys in the raw outputs.
+
+📎 LinkedIn post: _link coming soon_
+
