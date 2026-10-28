@@ -18,5 +18,6 @@ screenshots you need to rebuild the example in your own flow. Shorter one-expres
 | 007 | [A short ID in a file name](expressions.md#007-a-short-id-in-a-file-name) | _link coming soon_ |
 | 008 | [Tag a folder once: folder tags synced to files](008-folder-auto-tagging/) | _link coming soon_ |
 | 009 | [Excel column names and _x0023_](expressions.md#009-excel-column-names-and-x0023) | _link coming soon_ |
+| 011 | [Locked files: a latest-only retry list](011-locked-file-retry-queue/) | _link coming soon_ |
 
 Follow along on LinkedIn for new tips.
