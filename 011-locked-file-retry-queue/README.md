@@ -31,10 +31,17 @@ hourly retry can't bring back older values.
 2. **Get items** on the list
 3. **Apply to each** row: **Update file properties** with the stored values
    - succeeded → **Delete item**
-   - still locked (run after: has failed) → keep the row for the next hour
+   - failed (run after: has failed) → look at the error:
+
+| Error | Check | Action |
+|---|---|---|
+| Still locked | `contains(coalesce(body('Update_file_properties')?['message'], ''), 'locked for shared use')` | keep the row for the next hour |
+| File is gone | `equals(outputs('Update_file_properties')?['statusCode'], 404)` | **Delete item** (nothing left to update) |
+| Anything else | neither of the above | keep the row and notify someone |
 
 ## Edge cases to plan for
-- **File deleted or moved while waiting** — the retry fails every hour; remove the row when the file is gone (e.g. 404).
+- **File deleted while waiting** — handled by the 404 branch above (tested). A file moved to another library gets a
+  new ID, so plan for that case too.
 - **Two runs hit the lock at the same moment** — both may find no row and both insert one. Options: enable
   *Enforce unique values* on FileID and turn a failed insert into an update, or keep only the newest row per file in
   the hourly flow.
