@@ -135,29 +135,3 @@ column names, e.g. a column created as `Unit Price` has the internal name `Unit_
 To see the real names, run **List rows present in a table** and look at the keys in the raw outputs.
 
 📎 LinkedIn post: _link coming soon_
-
-## 010: Who has the file open?
-
-When **Update file properties** fails because someone has the file open, the error body's `message` contains
-`…is locked for shared use by someone@contoso.com.` — read the address and notify that person.
-
-Setup:
-1. After **Update file properties**, add the next steps with **Configure run after → has failed**.
-2. Condition: `contains(coalesce(body('Update_file_properties')?['message'], ''), 'locked for shared use by')` is `true`
-   (other errors would give a wrong result).
-3. Compose `LockedByRaw`:
-```
-first(split(last(split(coalesce(body('Update_file_properties')?['message'], ''), 'locked for shared use by ')), decodeUriComponent('%0D%0A')))
-```
-   → `someone@contoso.com.` (with the sentence's full stop)
-4. Compose `LockedBy` — drop the trailing full stop:
-```
-if(endsWith(outputs('LockedByRaw'), '.'), substring(outputs('LockedByRaw'), 0, max(sub(length(outputs('LockedByRaw')), 1), 0)), outputs('LockedByRaw'))
-```
-   → `someone@contoso.com`
-5. Send the note (email or Teams) to `outputs('LockedBy')`.
-
-Works for any email domain. Splitting on `@yourdomain.com` instead only works for one domain.
-
-📎 LinkedIn post: _link coming soon_
-
