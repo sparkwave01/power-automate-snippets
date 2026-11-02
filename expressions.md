@@ -59,7 +59,7 @@ Notes:
 - Quick test in a Compose:
   `union(createArray('Boston','Austin','Boston','Denver','boston'), createArray('Boston','Austin','Boston','Denver','boston'))`
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7523169654593347584/
 
 ## 007: A short ID in a file name
 
