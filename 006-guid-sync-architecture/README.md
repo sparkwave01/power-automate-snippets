@@ -58,4 +58,4 @@ flows never see those files and never fire for them. The scheduled check catches
 **Common mistake:** `contains(@{variables('DestinationGUIDs')}, @{item()})` — don't use `@{ }` inside an expression;
 it turns the values into text.
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7526096117764292609/
