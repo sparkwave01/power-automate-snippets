@@ -104,7 +104,7 @@ Notes:
   may need extra handling.
 - 6 hex characters ≈ 16.7 million combinations: plenty to keep file names apart in one library.
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7528971487584604160/
 
 ## 009: Excel column names and _x0023_
 

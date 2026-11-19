@@ -15,7 +15,7 @@ screenshots you need to rebuild the example in your own flow. Shorter one-expres
 | 004 | [Today's date in a file name (convertTimeZone)](expressions.md#004-todays-date-in-a-file-name) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7518112317729955840/) |
 | 005 | [Remove duplicates with union()](expressions.md#005-remove-duplicates-with-union) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7523169654593347584/) |
 | 006 | [Approved files to another site: GUID link + scheduled check](006-guid-sync-architecture/) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7526096117764292609/) |
-| 007 | [A short ID in a file name](expressions.md#007-a-short-id-in-a-file-name) | _link coming soon_ |
+| 007 | [A short ID in a file name](expressions.md#007-a-short-id-in-a-file-name) | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7528971487584604160/) |
 | 008 | [Tag a folder once: folder tags synced to files](008-folder-auto-tagging/) | _link coming soon_ |
 | 009 | [Excel column names and _x0023_](expressions.md#009-excel-column-names-and-x0023) | _link coming soon_ |
 | 011 | [Locked files: a latest-only retry list](011-locked-file-retry-queue/) | _link coming soon_ |
