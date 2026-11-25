@@ -25,4 +25,4 @@ Two checks stop that:
 1. A **trigger condition** on *When a file is created or modified (properties only)*, so most of those runs never start.
 2. A **condition inside the flow** that looks at which columns actually changed before updating anything.
 
-📎 LinkedIn post: _link coming soon_
+📎 LinkedIn post: https://www.linkedin.com/feed/update/urn:li:share:7531332486388269056/
